@@ -13,7 +13,7 @@ history. entity, dto, repository, service 생성.
 1. member entity는 수정 없이 member dto에만 lastLogin 속성 추가.
 2. db에 member_view 추가.
 
-(SELECT member.user_id, user_name, phone, email_auth_yn, reg_dt, admin_yn, (SELECT log_dt FROM login_history WHERE user_id= 'wodud170@naver.com' ORDER BY log_dt DESC LIMIT 1 )AS last_login
+(SELECT member.user_id, user_name, phone, email_auth_yn, reg_dt, admin_yn, (SELECT log_dt FROM login_history WHERE user_id= member.user_id ORDER BY log_dt DESC LIMIT 1 )AS last_login
 FROM MEMBER)
 
 3. memberMapper.selectList에서 member table 대신 member_view에서 조회하도록 변경.
