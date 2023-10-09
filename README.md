@@ -18,9 +18,13 @@ FROM MEMBER)
 
 3. memberMapper.selectList에서 member table 대신 member_view에서 조회하도록 변경.
 4. html에서 td 한칸을 늘려 last_login 속성 삽입
-페이지 기능 미구현
+
+※ 페이지 기능 미구현
 
 #### 관리자 회원관리 - 회원 상세정보에서 해당 회원 모든 로그인 일자 노출
 1. history service.list 구현 (history repository에서 findAllByUserIdOrderByIdDesc로 history list를 불러온뒤 dto list로 변환해 반환)
 2. admin member controller 에서 해당 메소드 호출후 model로 넘겨줌.
 3. 정보 아래칸에 부트스트랩이용한 table을 생성해 th:each로 리스트 크기만큼 tr 생성, 각 td에 정보 삽입.
+
+## 배너 등록 기능
+미구현
